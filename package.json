@@ -1,14 +1,14 @@
 {
-  "name": "react-native-svg-flagkit",
+  "name": "react-native-svg-flagkit-fixed-peer-dep",
   "version": "0.9.5",
   "description": "SVG flag for react-native",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jackmew/react-native-svg-flagkit"
+    "url": "https://github.com/kensomanpow/react-native-svg-flagkit"
   },
   "bugs": {
-    "url": "https://github.com/jackmew/react-native-svg-flagkit/issues"
+    "url": "https://github.com/kensomanpow/react-native-svg-flagkit/issues"
   },
   "keywords": [
     "react-component",
