@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {  Image, TouchableOpacity } from 'react-native';
+import { Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
+import { flagSvgs } from './Constants';
 
 export const getFlagObjectByCode = (code) => {
     return flagSvgs.find(flagSvg => flagSvg.code === code)
