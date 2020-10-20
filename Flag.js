@@ -1,12 +1,27 @@
-/**
- * SVG or PNG
- *
- * width : height = 21 : 15
- */
 import React, { Component } from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import {  Image, TouchableOpacity } from 'react-native';
 import PropTypes from 'prop-types';
-import { getFlagByDollarCode } from 'react-native-svg-flagkit-fixed-peer-dep'
+
+export const getFlagObjectByCode = (code) => {
+    return flagSvgs.find(flagSvg => flagSvg.code === code)
+}
+
+export const getFlagSvgComponentByCode = (code) => {
+    return getFlagObjectByCode(code).component
+}
+
+export const getFlagByDollarCode = (dollarCode) => {
+    let code = dollarCode.slice(0, 2)
+    if (dollarCode === 'ANG') {
+        code = 'NL'
+    }
+    const flagObject = getFlagObjectByCode(code)
+    if (flagObject) {
+        const flag = flagObject.component ? flagObject.component : flagObject.img
+        return flag
+    }
+    return null
+}
 
 export default class Flag extends Component {
     static propTypes = {
